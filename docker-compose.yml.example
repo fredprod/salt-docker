@@ -1,5 +1,5 @@
 master:
-  image: jacksoncage/salt:latest
+  image: fredprod/salt:latest
   environment:
     SALT_USE: master
     SALT_NAME: master
@@ -17,7 +17,7 @@ master:
   volumes:
     - ./srv/salt:/srv/salt/:rw
 minion1:
-  image: jacksoncage/salt:latest
+  image: fredprod/salt:latest
   links:
    - master
   environment:
@@ -26,7 +26,7 @@ minion1:
     SALT_GRAINS: "{'test': 'test'}"
   hostname: minion1
 minion2:
-  image: jacksoncage/salt:latest
+  image: fredprod/salt:latest
   links:
    - master
   environment:
