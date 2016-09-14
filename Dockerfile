@@ -1,20 +1,18 @@
-FROM        ubuntu:14.04
-MAINTAINER  Love Nyberg "love.nyberg@lovemusic.se"
-ENV REFRESHED_AT 2015-04-03
+FROM        debian:8
+MAINTAINER  Frederic Perrouin "frederic@fredprod.com"
+ENV REFRESHED_AT 2016-09-14
 
 # Update system
 RUN apt-get update && \
-	apt-get install -y wget curl dnsutils python-pip python-dev python-apt software-properties-common dmidecode
+	apt-get install -y wget curl dnsutils python-pip python-dev python-apt software-properties-common dmidecode sudo
 
-# Setup salt ppa
-RUN echo deb http://ppa.launchpad.net/saltstack/salt/ubuntu `lsb_release -sc` main | tee /etc/apt/sources.list.d/saltstack.list && \
-	wget -q -O- "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x4759FA960E27C0A6" | apt-key add -
+# Add Debian Jessie backports
+RUN echo deb http://ftp.debian.org/debian jessie-backports main | tee /etc/apt/sources.list.d/jessie-backports.list 
 
 # Install salt master/minion/cloud/api
-ENV SALT_VERSION 2014.7.2+ds-1trusty2
 RUN apt-get update && \
-	apt-get install -y salt-master=$SALT_VERSION salt-minion=$SALT_VERSION \
-	salt-cloud=$SALT_VERSION salt-api=$SALT_VERSION
+	apt-get install -y -t jessie-backports salt-master salt-minion \
+	salt-cloud salt-api
 
 # Setup halite
 RUN pip install cherrypy docker-py halite
