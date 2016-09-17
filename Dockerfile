@@ -7,8 +7,8 @@ RUN apt-get update && \
 	apt-get install -y wget curl dnsutils python-pip python-dev python-apt software-properties-common dmidecode sudo
 
 # Add Salt Jessie repository
-RUN echo deb http://repo.saltstack.com/apt/ubuntu/14.04/amd64/latest jessie main | tee /etc/apt/sources.list.d/saltstack.list 
-RUN wget -O - https://repo.saltstack.com/apt/debian/8/amd64/latest/SALTSTACK-GPG-KEY.pub | apt-key add -
+RUN echo deb http://repo.saltstack.com/apt/debian/8/amd64/latest jessie main | tee /etc/apt/sources.list.d/saltstack.list 
+RUN wget -qO - http://repo.saltstack.com/apt/debian/8/amd64/latest/SALTSTACK-GPG-KEY.pub | apt-key add -
 
 # Install salt master/minion/cloud/api
 RUN apt-get update && \
