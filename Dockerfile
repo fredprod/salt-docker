@@ -1,6 +1,6 @@
 FROM        debian:8
 MAINTAINER  Frederic Perrouin "frederic@fredprod.com"
-ENV REFRESHED_AT 2016-09-14
+ENV REFRESHED_AT 2016-09-17
 
 # Update system
 RUN apt-get update && \
