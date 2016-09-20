@@ -23,6 +23,14 @@ Salt master is auto accepting all minions.
 
  - Build from ** Debian Jessie ** + config on minion to use mysql_debian.cnf
 
+### Ubuntu1404
+
+ - Build from ** Ubuntu 14.04 trusty **
+
+### Ubuntu1604
+
+ - Build from ** Ubuntu 16.04 trusty **
+
 ## Get it running
 
 ### Salt master/minon with docker run
@@ -63,7 +71,7 @@ Following paths can be mounted from the container. `/srv/salt` is needed to run 
 
  - `/etc/salt` - Master/Minion config
  - `/var/cache/salt` - job data cache
- - `/var/logs/salt` - logs
+ - `/var/log/salt` - logs
  - `/srv/salt` - states, pillar reactors
 
 ## Build
