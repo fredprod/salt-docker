@@ -63,7 +63,7 @@ Following paths can be mounted from the container. `/srv/salt` is needed to run 
 
  - `/etc/salt` - Master/Minion config
  - `/var/cache/salt` - job data cache
- - `/var/logs/salt` - logs
+ - `/var/log/salt` - logs
  - `/srv/salt` - states, pillar reactors
 
 ## Build
