@@ -13,6 +13,16 @@ Salt master is auto accepting all minions.
 
  - **2016.3.0 (Boron)** in 20160917
 
+## Branch
+
+### Master
+
+ - Build from ** Debian Jessie ** and default Salt config
+
+### Develop
+
+ - Build from ** Debian Jessie ** + config on minion to use mysql_debian.cnf
+
 ## Get it running
 
 ### Salt master/minon with docker run
