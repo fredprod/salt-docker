@@ -11,25 +11,8 @@ Salt master is auto accepting all minions.
 
 ### Latest from Saltstack repository for Debian Jessie
 
- - **2016.3.0 (Boron)** in 20160917
-
-## Branch
-
-### Master
-
- - Build from ** Debian Jessie ** and default Salt config
-
-### Develop
-
- - Build from ** Debian Jessie ** + config on minion to use mysql_debian.cnf
-
-### Ubuntu1404
-
- - Build from ** Ubuntu 14.04 trusty **
-
-### Ubuntu1604
-
- - Build from ** Ubuntu 16.04 trusty **
+ - **2016.3.0 (Boron)** in 20160917 except tag:minideb
+ - **2016.11.1** in 20161229 tag:minideb
 
 ## Get it running
 
@@ -73,6 +56,15 @@ Following paths can be mounted from the container. `/srv/salt` is needed to run 
  - `/var/cache/salt` - job data cache
  - `/var/log/salt` - logs
  - `/srv/salt` - states, pillar reactors
+
+## Tags
+Tag represent distribution based.
+
+ - ubuntu14.04
+ - ubuntu16.04
+ - latest (Debian Jessie)
+ - minideb (bitnami/minideb)
+ - develop (do not use it!)
 
 ## Build
 
