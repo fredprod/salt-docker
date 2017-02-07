@@ -20,3 +20,4 @@ rest_cherrypy:
   debug: True
   webhook_url: /hook
   port: 8081
+state_verbose: True
