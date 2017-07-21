@@ -9,10 +9,10 @@ Salt master is auto accepting all minions.
 
 ## Salt versions
 
-### Latest from Saltstack repository for Debian Jessie
+### Latest from Saltstack repository for Debian Stretch
 
- - **2016.3.0 (Boron)** in 20160917 except tag:minideb
- - **2016.11.1** in 20161229 tag:minideb
+ - **2017.7.0 (Nitrogen)** in 20170721
+ - **2017.7.0 (Nitrogen)** in 20170721 tag:minideb
 
 ## Get it running
 
@@ -62,7 +62,7 @@ Tag represent distribution based.
 
  - ubuntu14.04
  - ubuntu16.04
- - latest (Debian Jessie)
+ - latest (Debian Stretch)
  - minideb (bitnami/minideb)
  - develop (do not use it!)
 

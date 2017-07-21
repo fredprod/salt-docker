@@ -1,14 +1,14 @@
-FROM        debian:8
+FROM        debian:9
 MAINTAINER  Frederic Perrouin "frederic@fredprod.com"
-ENV REFRESHED_AT 2016-09-17
+ENV REFRESHED_AT 2017-07-21
 
 # Update system
 RUN apt-get update && \
-	apt-get install -y wget curl dnsutils python-pip python-dev python-apt software-properties-common dmidecode sudo
+	apt-get install -y wget curl dnsutils python-pip python-dev python-apt software-properties-common dmidecode sudo gnupg
 
-# Add Salt Jessie repository
-RUN echo deb http://repo.saltstack.com/apt/debian/8/amd64/latest jessie main | tee /etc/apt/sources.list.d/saltstack.list 
-RUN wget -qO - http://repo.saltstack.com/apt/debian/8/amd64/latest/SALTSTACK-GPG-KEY.pub | apt-key add -
+# Add Salt Stretch repository
+RUN echo deb http://repo.saltstack.com/apt/debian/9/amd64/latest stretch main | tee /etc/apt/sources.list.d/saltstack.list 
+RUN wget -qO - http://repo.saltstack.com/apt/debian/9/amd64/latest/SALTSTACK-GPG-KEY.pub | apt-key add -
 
 # Install salt master/minion/cloud/api
 RUN apt-get update && \
