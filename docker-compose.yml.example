@@ -9,11 +9,6 @@ master:
   expose:
     - "4505"
     - "4506"
-    - "8080"
-    - "8081"
-  ports:
-    - "8080:8080"
-    - "8081:8081"
   volumes:
     - ./srv/salt:/srv/salt/:rw
 minion1:
