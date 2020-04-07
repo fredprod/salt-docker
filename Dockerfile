@@ -1,6 +1,6 @@
 FROM        debian:buster-slim
 MAINTAINER  Frederic Perrouin "frederic@fredprod.com"
-ENV REFRESHED_AT 2019-12-17
+ENV REFRESHED_AT 2020-04-07
 
 # Update system
 RUN apt-get update && \
