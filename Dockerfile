@@ -1,10 +1,6 @@
 FROM        debian:buster-slim
 MAINTAINER  Frederic Perrouin "frederic@fredprod.com"
-<<<<<<< HEAD
 ENV REFRESHED_AT 2020-10-09
-=======
-ENV REFRESHED_AT 2020-04-07
->>>>>>> refs/remotes/origin/master
 
 # Update system
 RUN apt-get update && \
