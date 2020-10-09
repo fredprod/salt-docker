@@ -11,7 +11,7 @@ Salt master is auto accepting all minions.
 
 ### Latest from Saltstack repository for Debian Jessie
 
- - **2016.3.0 (Boron)** in 20160917
+ - **3000.3** in 20201009
 
 ## Branch
 

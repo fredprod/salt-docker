@@ -1,6 +1,6 @@
 FROM        ubuntu:16.04
 MAINTAINER  Frederic Perrouin "frederic@fredprod.com"
-ENV REFRESHED_AT 2019-01-12
+ENV REFRESHED_AT 2020-10-09
 
 # Update system
 RUN apt-get update && \
