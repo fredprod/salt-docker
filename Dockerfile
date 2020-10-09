@@ -1,14 +1,17 @@
 FROM        ubuntu:18.04
 MAINTAINER  Frederic Perrouin "frederic@fredprod.com"
-ENV REFRESHED_AT 2019-12-17
+ENV REFRESHED_AT 2020-10-09
+
+ENV DEBIAN_FRONTEND noninteractive
+ENV DEBCONF_NONINTERACTIVE_SEEN true
 
 # Update system
 RUN apt-get update && \
 	apt-get install -y wget software-properties-common sudo
 
 # Add Salt Ubuntu 16.04 repository
-RUN echo deb http://repo.saltstack.com/apt/ubuntu/18.04/amd64/latest bionic  main | tee /etc/apt/sources.list.d/saltstack.list 
-RUN wget -qO - http://repo.saltstack.com/apt/ubuntu/18.04/amd64/latest/SALTSTACK-GPG-KEY.pub | apt-key add -
+RUN echo deb http://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest bionic  main | tee /etc/apt/sources.list.d/saltstack.list 
+RUN wget -qO - https://repo.saltstack.com/py3/ubuntu/18.04/amd64/latest/SALTSTACK-GPG-KEY.pub | apt-key add -
 
 # Install salt master/minion/cloud/api
 RUN apt-get update && \

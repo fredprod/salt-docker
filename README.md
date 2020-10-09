@@ -11,7 +11,7 @@ Salt master is auto accepting all minions.
 
 ### Latest from Saltstack repository for Debian Jessie
 
- - **2016.3.0 (Boron)** in 20160917
+ - **3001.1** in 20201009
 
 ## Branch
 
@@ -31,7 +31,7 @@ Run one container with a master/minion setup.
 
 ```
 docker run -i -t --name=saltdocker_master_1 -h master -p 4505 -p 4506 \
-   -p 8080 -p 8081 -e SALT_NAME=master -e SALT_USE=master \
+   -e SALT_NAME=master -e SALT_USE=master \
    -v `pwd`/srv/salt:/srv/salt:rw freprod/salt
 ```
 
