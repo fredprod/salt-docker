@@ -9,10 +9,9 @@ Salt master is auto accepting all minions.
 
 ## Salt versions
 
-### Latest from Saltstack repository for Debian Stretch
+### Latest from Saltstack repository for Debian Buster
 
- - **2017.7.0 (Nitrogen)** in 20170721
- - **2017.7.0 (Nitrogen)** in 20170721 tag:minideb
+ - **3001.1** in 20201009
 
 ## Get it running
 
@@ -22,7 +21,7 @@ Run one container with a master/minion setup.
 
 ```
 docker run -i -t --name=saltdocker_master_1 -h master -p 4505 -p 4506 \
-   -p 8080 -p 8081 -e SALT_NAME=master -e SALT_USE=master \
+   -e SALT_NAME=master -e SALT_USE=master \
    -v `pwd`/srv/salt:/srv/salt:rw freprod/salt
 ```
 
@@ -62,8 +61,8 @@ Tag represent distribution based.
 
  - ubuntu14.04
  - ubuntu16.04
- - latest (Debian Stretch)
- - minideb (bitnami/minideb)
+ - ubuntu18.04
+ - latest (Debian Buster)
  - develop (do not use it!)
 
 ## Build

@@ -1,12 +1,12 @@
 FROM        debian:buster-slim
 MAINTAINER  Frederic Perrouin "frederic@fredprod.com"
-ENV REFRESHED_AT 2019-12-17
+ENV REFRESHED_AT 2020-10-09
 
 # Update system
 RUN apt-get update && \
 	apt-get install -y wget software-properties-common sudo gnupg dirmngr
 
-# Add Salt Stretch repository
+# Add Salt Buster repository
 RUN echo deb http://repo.saltstack.com/py3/debian/10/amd64/latest buster main | tee /etc/apt/sources.list.d/saltstack.list 
 RUN wget -qO - https://repo.saltstack.com/py3/debian/10/amd64/latest/SALTSTACK-GPG-KEY.pub | apt-key add -
 
