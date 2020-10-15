@@ -1,18 +1,14 @@
-FROM        debian:buster-slim
+FROM        centos:7
 MAINTAINER  Frederic Perrouin "frederic@fredprod.com"
-ENV REFRESHED_AT 2020-10-09
+ENV REFRESHED_AT 2020-10-15
 
 # Update system
-RUN apt-get update && \
-	apt-get install -y wget software-properties-common sudo gnupg dirmngr
+RUN	yum -y update
 
 # Add Salt Buster repository
-RUN echo deb http://repo.saltstack.com/py3/debian/10/amd64/latest buster main | tee /etc/apt/sources.list.d/saltstack.list 
-RUN wget -qO - https://repo.saltstack.com/py3/debian/10/amd64/latest/SALTSTACK-GPG-KEY.pub | apt-key add -
-
-# Install salt master/minion/cloud/api
-RUN apt-get update && \
-	apt-get install -y salt-master salt-minion
+RUN yum -y install https://repo.saltstack.com/py3/redhat/salt-py3-repo-latest.el7.noarch.rpm && \
+    yum clean expire-cache && \
+    yum -y install salt-master salt-minion
 
 # Add salt config files
 ADD etc/master /etc/salt/master
